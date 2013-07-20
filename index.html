@@ -285,6 +285,10 @@
 				margin-top: 10px;
 			}
 
+			div.stamp img {
+				border: 4px solid #ccc;
+			}
+
 		</style>
 
 		<script type="text/javascript">
@@ -297,9 +301,17 @@
 					placement: 'right',
 					trigger: 'hover'
 				});
+
+				$('#psm').popover({
+					content: "<p class=\"popup\">That's me</p>",
+					html: true,
+					placement: 'right',
+					trigger: 'hover'
+				});
 				
 			});
 		</script>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 	</head>
 	<body>
 		<div id="ribbon" class="github-fork-ribbon-wrapper right" style="pointer-events: none;">
@@ -318,7 +330,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="brand" href="#">Noted Code Bitstarter</a>
+					<a class="brand" href="/">Noted Code Bitstarter</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li class="active"><a href="/">Home</a></li>
@@ -344,9 +356,17 @@
 
 		<div class="container">
 			<div class="row-fluid intro">
-				<div class="span6 offset3 center">
-					<p class="lead">Unlike other "Bitstarters", Noted Code is not asking for your hard-earned bitcoins.</p>
+				<div class="span3 center">
+					<div class="stamp">
+						<img id="psm" class="stamp pull-left img-circle" src="https://notedcode.com/static/img/psm.jpg" width="128" height="128" data-original-title="" title="">
+					</div>
+				</div>
+				<div class="span6 center">
+					<p class="lead">Unlike many other "Bitstarters", Noted Code is not asking for your hard-earned bitcoins, just a Tweet.</p>
 					<p class="lead">But what I'm building is going to be <em>very</em> useful for you during the course. You can use Noted Code now to help understand code better.</p>
+				</div>
+				<div class="span3 center">
+					<p class="lead"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://notedcode.com" data-text="I'm trying something to make understanding code better." data-via="NotedCode" data-size="large">Tweet</a></p>
 				</div>
 			</div>
 		</div>
@@ -357,14 +377,23 @@
 			</div>
 		</div>
 
+		<div class="container">
+			<div class="row-fluid intro">
+				<div class="span6 offset3 center">
+					<p class="lead">Use it to help learn from the code that you read and study, by sharing notes with others.</p>
+					<p class="lead">Search for any GitHub repository, browse any GitHub or Bitbucket repository, and keep track of all the notes that you make against code in them.</p>
+				</div>
+			</div>
+		</div>
+
 		<div class="container section" id="about">
 			<div class="row-fluid section1">
 				<div class="span5 offset1 copy">
 					<p>
 						Noted Code does three things very well:
 						<ol>
-							<li>It makes the code in any GitHub repository <em>much easier to read</em>, by extracting all code comments and presenting them in a structured manner alongside the code.</li>
-							<li>It lets you <em>add your own comments</em> in the form of notes alongside the code. Those comments stay with the code as it changes.</li>
+							<li>It makes the code in any GitHub or Bitbucket repository <em>much easier to read</em>, by extracting all code comments and presenting them in a structured manner alongside the code.</li>
+							<li>It lets you <em>add your own comments</em> in the form of notes alongside the code. Those comments stay in the right place with the code as it changes.</li>
 							<li>It shows you notes <em>from other people</em>, not just the original developer.</li>
 						</ol>
 					</p>
@@ -439,7 +468,7 @@
 		<div class="container separated">
 
 			<!-- CC By-SA 3.0 license -->
-			<div class="row-fluid footer">
+			<div class="row-fluid footer separated">
 				<div class="span12">
 					<p>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>.</p>
 				</div>
