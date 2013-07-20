@@ -308,7 +308,20 @@
 					placement: 'right',
 					trigger: 'hover'
 				});
-				
+
+				$.ajax({
+					type: 'GET',
+					url: 'https://notedcode.com/api/usercount/',
+					dataType: 'jsonp',
+					jsonpCallback: 'countback',
+					success: function(data) {
+						var count = data['count'];
+						$('#usercount').html(count);
+
+						var percent = count / 10;
+						$('#countbar').width(percent + '%');
+					}
+				});
 			});
 		</script>
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -405,7 +418,7 @@
 							<div class="statistics">
 								<div class="span8 offset2">
 									<div class="linediv-l">
-										<h3>27</h3> <p>Early Adopters</p>
+										<h3 id="usercount">?</h3> <p>Early Adopters</p>
 									</div>
 								</div>
 							</div>
@@ -415,7 +428,7 @@
 					<div class="row-fluid">
 						<div class="span10 offset1">
 							<div class="thermometer progress active">
-								<div class="bar bar-success" style="width: 6%;"></div>
+								<div id="countbar" class="bar bar-success" style="width: 6%;"></div>
 							</div>
 						</div>
 					</div>
