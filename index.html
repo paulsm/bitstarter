@@ -363,7 +363,7 @@
 		</script>
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 	</head>
-	<body>
+	<body data-spy="scroll" data-target=".navbar">
 		<div id="ribbon" class="github-fork-ribbon-wrapper right" style="pointer-events: none;">
     		<div class="github-fork-ribbon">
         		<a href="https://class.coursera.org/startup-001/class/index" style="pointer-events: all;">Made for the Coursera<br/><span class="smalltext">Stanford Startup Engineering Course</span></a>
@@ -383,7 +383,7 @@
 					<a class="brand" href="/">Noted Code Bitstarter</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li class="active"><a href="/">Home</a></li>
+							<li class="active"><a href="#overview">Home</a></li>
 							<li><a href="#about">About</a></li>
 							<li><a href="#contact">Contact</a></li>
 						</ul>
@@ -427,7 +427,7 @@
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container" id="about">
 			<div class="row-fluid intro">
 				<div class="span12 center">
 					<h2>Noted Code lets you&hellip;</h2>
@@ -449,7 +449,7 @@
 			</div>
 		</div>
 
-		<div class="container" id="about">
+		<div class="container">
 			<div class="row-fluid section1">
 				<div class="span6 offset3 actions">
 					<div class="row-fluid">
